@@ -88,6 +88,7 @@ class SamPredictor:
         input_image = self.model.preprocess(transformed_image)
         self.features = self.model.image_encoder(input_image)
         self.is_image_set = True
+        return input_image
 
     def predict(
         self,
